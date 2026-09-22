@@ -1,0 +1,59 @@
+{
+  "name": "Despesa",
+  "type": "object",
+  "properties": {
+    "descricao": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o da despesa"
+    },
+    "valor": {
+      "type": "number",
+      "description": "Valor total da despesa"
+    },
+    "categoria": {
+      "type": "string",
+      "enum": [
+        "Moradia",
+        "Alimenta\u00e7\u00e3o",
+        "Transporte",
+        "Sa\u00fade",
+        "Educa\u00e7\u00e3o",
+        "Lazer",
+        "Vestu\u00e1rio",
+        "Contas",
+        "Outros"
+      ],
+      "description": "Categoria da despesa"
+    },
+    "data": {
+      "type": "string",
+      "description": "M\u00eas/ano da despesa (formato YYYY-MM)"
+    },
+    "parcelado": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se a despesa \u00e9 parcelada"
+    },
+    "totalParcelas": {
+      "type": "number",
+      "default": 1,
+      "description": "N\u00famero total de parcelas"
+    },
+    "recorrente": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se a despesa se repete todos os meses"
+    },
+    "mesesRecorrencia": {
+      "type": "number",
+      "default": 12,
+      "description": "Quantos meses a despesa ir\u00e1 se repetir"
+    }
+  },
+  "required": [
+    "descricao",
+    "valor",
+    "categoria",
+    "data"
+  ]
+}

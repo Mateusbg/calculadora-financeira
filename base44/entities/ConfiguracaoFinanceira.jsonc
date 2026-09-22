@@ -1,0 +1,31 @@
+{
+  "name": "ConfiguracaoFinanceira",
+  "type": "object",
+  "properties": {
+    "salario": {
+      "type": "number",
+      "description": "Sal\u00e1rio l\u00edquido (ap\u00f3s descontos)"
+    },
+    "salarioBruto": {
+      "type": "number",
+      "description": "Sal\u00e1rio bruto (antes dos descontos)"
+    },
+    "descontoINSS": {
+      "type": "number",
+      "description": "Valor do desconto de INSS"
+    },
+    "pagamentoQuinzenal": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se o pagamento \u00e9 feito em duas quinzenas"
+    },
+    "percentualAdiantamento": {
+      "type": "number",
+      "default": 40,
+      "description": "Percentual do sal\u00e1rio pago no adiantamento quinzenal"
+    }
+  },
+  "required": [
+    "salario"
+  ]
+}
